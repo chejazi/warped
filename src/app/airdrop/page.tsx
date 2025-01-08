@@ -1,13 +1,13 @@
 import { Metadata } from "next";
-import App from "./app";
+import Airdrop from "~/components/Airdrop";
 
 const appUrl = process.env.NEXT_PUBLIC_URL || 'https://warped.art';
 
 const frame = {
   version: "next",
-  imageUrl: `${appUrl}/opengraph-image`,
+  imageUrl: `${appUrl}/warpcash-banner.png`,
   button: {
-    title: "Launch",
+    title: "Claim Warpcash",
     action: {
       type: "launch_frame",
       name: "Warped",
@@ -32,7 +32,8 @@ export async function generateMetadata(): Promise<Metadata> {
     },
   };
 }
-
-export default function Home() {
-  return (<App />);
+export default function Page() {
+  return (
+    <Airdrop />
+  );
 }

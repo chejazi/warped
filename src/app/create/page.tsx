@@ -1,5 +1,6 @@
 import { Metadata } from "next";
-import App from "./app";
+
+import Create from "~/components/Create";
 
 const appUrl = process.env.NEXT_PUBLIC_URL || 'https://warped.art';
 
@@ -33,6 +34,8 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-export default function Home() {
-  return (<App />);
+export default function CreatePage() {
+  return (
+    <Create />
+  );
 }
